@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Button 特效</title>
+<style>
+html,body{
+  background:#C1EBFF;
+}
+body{
+  text-align:center;
+}
+button {
+  position:relative;
+  height: 40px;
+  font-size: 1em;
+  padding: 0 2em;
+  cursor:pointer;
+  outline:none;
+}
+.b-style-1 {
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  transition:800ms ease all;
+}
+.b-style-1:hover {
+  background:#fff;
+  color:#1AAB8A;
+}
+.b-style-1:before,
+.b-style-1:after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.b-style-1:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.b-style-1:hover:before, 
+.b-style-1:hover:after {
+  width:100%;
+  transition:800ms ease all;
+}
+
+/******************************************/
+.b-style-2 {
+  background:#fff;
+  color:#cccccc;
+  position:relative;
+  box-sizing: border-box;
+  border: 1px solid #cccccc; 
+  transition: all 200ms ease-out 800ms;
+}
+.b-style-2:hover {
+  color:#1AAB8A;
+  border: 1px solid #1AAB8A;
+  transition: all 200ms ease-out;
+
+}
+.b-style-2::before, 
+.b-style-2::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  border: 1px solid transparent;
+  width: 0;
+  height: 0;
+}
+.b-style-2::before {
+  top: 0;
+  left: 0;
+  transition: height 200ms ease-out 600ms, width 400ms ease-out 800ms, border-color 0s ease-out 1250ms;
+}
+.b-style-2::after {
+  bottom: 0;
+  right: 0;
+  transition: height 200ms ease-out, width 400ms ease-out 200ms, border-color 0s ease-out 600ms;
+}
+.b-style-2:hover::before, 
+.b-style-2:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.b-style-2:hover::before {
+  border-top-color: #1AAB8A;
+  border-right-color: #1AAB8A;
+  transition: width 400ms ease-out, height 200ms ease-out 400ms;
+}
+.b-style-2:hover::after {
+  border-bottom-color: #1AAB8A;
+  border-left-color: #1AAB8A;
+  transition:border-color 0ms ease-out 600ms, width 400ms ease-out 600ms, height 200ms ease-out 1000ms;
+}
+/**********************************************************/
+.b-style-3 {
+  background:#fff;
+  color:#cccccc;
+  position:relative;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  transition: all 0ms ease 600ms;
+}
+.b-style-3:hover {
+	color:#1AAB8A;
+	border: 1px solid #1AAB8A;
+	transition: all 400ms ease;
+}
+.b-style-3::before,
+.b-style-3::after {
+	content: '';
+	box-sizing: border-box;
+	top: 0; 
+	left: 0;
+	height: 0; 
+	width: 0;
+	border: 1px solid transparent;
+	position: absolute;
+}
+.b-style-3::before {
+	transition: height 200ms ease-out, width 400ms ease-out 200ms, border 0ms ease 600ms;
+}
+.b-style-3::after {
+	transition: width 400ms ease-out, height 200ms ease-out 400ms, border 0ms ease 600ms;
+}
+.b-style-3:hover::before, 
+.b-style-3:hover::after {
+    width: 100%;
+    height: 100%;
+}
+.b-style-3:hover::before {
+	border-top-color: #1AAB8A;
+	border-right-color: #1AAB8A;
+	transition: width 400ms ease-out, height 200ms ease-out 400ms;
+}
+.b-style-3:hover::after {
+	border-bottom-color: #1AAB8A;
+	border-left-color: #1AAB8A;
+	transition: height 200ms ease-out, width 400ms ease-out 200ms;
+}
+/*******************************************************************************/
+.b-style-4 {
+  background:#fff;
+  color:#cccccc;
+  border:none;
+}
+.b-style-4:hover {
+  color:#1AAB8A;
+}
+.b-style-4::before, 
+.b-style-4::after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+}
+.b-style-4::before {
+  border-top: 2px solid #1AAB8A;
+  border-bottom: 2px solid #1AAB8A;
+  transform: scale(0, 1);
+}
+.b-style-4::after {
+  border-left: 2px solid #1AAB8A;
+  border-right: 2px solid #1AAB8A;
+  transform: scale(1, 0);	
+}
+.b-style-4:hover::before, 
+.b-style-4:hover::after {
+  transform: scale(1, 1);
+  transition: transform 0.5s;
+}
+/***********************************************************************/
+.b-style-5,
+.b-style-5::before,
+.b-style-5::after {
+	border: none;
+	height: 100px; 
+	width: 100px;
+}
+.b-style-5::before,
+.b-style-5::after {
+	position: absolute;
+	content: ''; 
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	border: 2px solid transparent;
+}
+.b-style-5:hover::before {
+	border-top-color: #1AAB8A;
+	border-right-color: #1AAB8A;
+	border-bottom-color: #1AAB8A;
+	transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.b-style-5:hover::after {
+  border-top: 2px solid #0eb7da;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  transform: rotate(270deg);
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+/***********************************************************************/
+.cicle,
+.cicle::before,
+.cicle::after {
+	border: none;
+	height: 100px; 
+	width: 100px;
+	border-radius: 50%;
+}
+.cicle::before,
+.cicle::after {
+	position: absolute;
+	content: ''; 
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 2px solid transparent;
+}
+.cicle:hover::before {
+	border-top-color: #1AAB8A;
+	border-right-color: #1AAB8A;
+	border-bottom-color: #1AAB8A;
+	transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.cicle:hover::after {
+  border-top: 2px solid #0eb7da;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  transform: rotate(270deg);
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+/******************************************************************************/
+.triggle {
+	width: 60px;
+	height: 80px;
+	background: #cccccc;
+	position: relative;
+	margin: 0 100px;
+}
+.triggle::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 60px;
+	border: 40px solid transparent;
+	border-right-color: #cccccc;
+}
+.triggle::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 60px;
+	border: 40px solid transparent;
+	border-left-color: #cccccc;
+}
+</style>
+</head>
+<body>
+	<a href="http://demo.jb51.net/js/2016/button-border(jb51.net)/">click me!</a>
+	<button class="b-style-1">Hover me !</button>
+	<button class="b-style-2">Hover me !</button>
+	<button class="b-style-3">Hover me !</button>
+	<button class="b-style-4">Hover me !</button>
+	<button class="b-style-5">Hover me !</button>
+	<button class="cicle">Hover me !</button>
+	<button class="spin thick">Hover me !</button>
+	<div class="triggle"></div>
+</body>
+</html>
