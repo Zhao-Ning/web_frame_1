@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>b-demo</title>
+    <link rel="stylesheet" type="text/css" href="src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="src/assets/css/style.css">
+  </head>
+  <body>
+  	<!-- 头部导航栏 Start -->
+    <nav id="nvaWrapper" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbarBrand" class="navbar-brand" href="#">
+          	<img class="logo-img" alt="logo" src="src/assets/css/img/qsjqjlogo.png">
+          	全视界全景
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="navbarRight" class="nav navbar-nav navbar-right">
+            <li><a href="#">特甜VR</a></li>
+            <li><a class="active" href="#">全视界全景</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- 头部导航栏 End -->
+
+    <div class="content-wrapper">
+      <!-- canvas背景 Start -->
+      <section class="anchor">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+			<h1 class="main-title animated fadeInUpNow"><span>全景</span><span>换个角度看世界</span></h1>
+			<div id="toAnchor2" class="mouse-down">
+				<span class="arrow-1"></span>
+				<span class="arrow-2"></span>
+			</div>
+		</div>
+      </section>
+      <!-- canvas背景 End -->
+
+	  <!-- 全景拍摄 Start -->
+	  <section class="container anchor">
+	  	<div class="row section-header-wrapper">
+	  		<div class="col-md-12 animated fadeInDownNow animate-delay--5">
+		  		<h2 class="section-header">全景拍摄</h2>
+		  		<h3 class="section-subheader">全景，让精彩更进一步</h3>
+	  		</div>
+	  	</div>
+	  	<div class="row">
+	        <div class="col-md-4 animated fadeInDownNow">
+	          <img src="src/assets/css/img/input_device.png" class="pro-img">
+	          <h3 class="pro-header">720°无死角</h3>
+	        </div>
+	        <div class="col-md-4 animated fadeInDownNow animate-delay-1">
+	          <img src="src/assets/css/img/pc_device.png" class="pro-img">
+	          <h3 class="pro-header">立体化全场景</h3>
+	       </div>
+	        <div class="col-md-4 animated fadeInDownNow animate-delay-2">
+	          <img src="src/assets/css/img/all_device.png" class="pro-img">
+	          <h3 class="pro-header">全平台完美兼容</h3>
+	        </div>
+	  	</div>
+	  	<div class="row">
+	  		<ul class="pro-nav animated fadeInNow animate-delay-1">
+				<li class="pro-button active" data-type="all">全部</li>
+				<li class="pro-button" data-type="house">楼盘</li>
+				<li class="pro-button" data-type="spot">现场</li>
+			</ul>
+			<div class="col-md-12 animated fadeInUpNow">
+		        <div data-protype="spot" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img1.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+		        <div data-protype="spot" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img4.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+		        <div data-protype="house" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img1.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+		        <div data-protype="spot" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img4.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+		        <div data-protype="house" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img1.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+		        <div data-protype="spot" class="col-md-4 pro-wrapper animated">
+		          <div class="pro-container">
+		          	<img src="src/assets/css/img/img4.jpg" class="pro-img">
+		          	<a class="pro-hide">
+		          		<div class="code-img" style="background: url('src/assets/css/img/ewm.png') center no-repeat;"></div>
+		          	</a>
+		          </div>
+		          <h3 class="pro-header-2">南京长江大桥</h3>
+		        </div>
+			</div>
+	  	</div>
+	  </section>
+
+	  <section class="anchor">
+	  	<div data-stellar-background-ratio="0.5" class="scroll-title" style="background: url(src/assets/css/img/img3.jpg) fixed;">
+	  		<h1 class="animated fadeInUpNow"><span>全视界</span><span>全场景</span><span>极值体验</span></h1>
+	  	</div>
+	  	<div class="container">
+	  		<div class="row section-header-wrapper">
+		  		<div class="col-md-12 animated fadeInDownNow">
+			  		<h2 class="section-header">全景直播</h2>
+			  		<h3 class="section-subheader">你在或不在，你都在那里</h3>
+		  		</div>
+		  	</div>
+	  		<div class="row">
+		  		<div class="col-md-12 video-content">
+			  		<div class="video animated fadeInUpNow">
+			  			<img src="src/assets/css/img/vrlive.jpg" width="100%">
+			  		</div>
+			  		<p>全景视频直播解决方案所带来的720°全沉浸式视觉体验服务</p>
+			  		<p>让用户只需要滑动手机屏幕或者佩戴VR头盔</p>
+			  		<p>即可获得身临现场的全方位同步视听体验</p>
+		  		</div>
+		  	</div>
+	  	</div>
+	  </section>
+
+	  <section class="anchor">
+	  	<div data-stellar-background-ratio="0.5" class="scroll-title" style="background: url(src/assets/css/img/img5.jpg) fixed;">
+	  		<h1 class="animated fadeInUpNow"><span>匠心雕琢</span> <span>极致为你</span></h1>
+	  	</div>
+	  	<div class="container">
+	  		<div class="row section-header-wrapper">
+		  		<div class="col-md-12 animated fadeInDownNow animate-delay-1">
+			  		<h2 class="section-header">合作伙伴</h2>
+		  		</div>
+		  	</div>
+	  		<div class="row">
+	  			<div class="col-md-3 col-xs-6 animated fadeInDownNow">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInDownNow animate-delay--5">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInDownNow animate-delay-1">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInDownNow animate-delay-1-5">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInUpNow">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInUpNow animate-delay--5">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInUpNow animate-delay-1">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+	  			<div class="col-md-3 col-xs-6 animated fadeInUpNow animate-delay-1-5">
+	  				<img class="hz-img" src="src/assets/css/img/theta.png">
+	  			</div>
+		  	</div>
+	  	</div>
+	  </section>
+    </div>
+
+	<footer class="text-center">
+		<p>&copy; 南京萝卜特甜信息科技有限公司</p>
+		<p><small>南京市建邺区江东中路98号河西万达广场F座812室</small></p>
+		<h4><strong><a href="tel:025-66911667" target="_blank">025-66911667</a></strong></h4>
+		<p>
+		<small>
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" class="color-footer">苏ICP备15041839号</a>
+		</small>
+		</p>
+	</footer>
+
+	<nav class="anchor-nav-wrapper">
+		<ul class="anchor-nav-container">
+		  <li class="anchor-nav active">
+		  	<i class="glyphicon glyphicon-home"></i>
+		  	<span>首页</span>
+		  </li>
+		  <li class="anchor-nav">
+		  	<i class="glyphicon glyphicon-camera"></i>
+		  	<span>全景拍摄</span>
+		  </li>
+		  <li class="anchor-nav">
+		  	<i class="glyphicon glyphicon-facetime-video"></i>
+		  	<span>全景直播</span>
+		  </li>
+		  <li class="anchor-nav">
+		  	<i class="glyphicon glyphicon-th"></i>
+		  	<span>合作伙伴</span>
+		  </li>
+		</ul>
+	</nav>
+
+	<div id="scrollTop" class="scroll-top"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="src/assets/js/bootstrap.min.js"></script>
+    <!-- 视差滚动插件 -->
+    <script src="src/assets/js/jquery.stellar.js"></script>
+    <!-- 当元素滚动到窗口或变为可见时触发 插件 -->
+    <script src="src/assets/js/jquery.appear.js"></script>
+    <script src="src/assets/js/canvas.1.js"></script>
+  </body>
+  <script>
+		$(function(){
+
+			// 初始化视差滚动插件
+			$.stellar({
+				horizontalScrolling: false,
+				verticalOffset: 40
+			});
+
+			var winPos, //当前滚动的地方的窗口顶端到整个页面顶端的距离
+				winH = $(window).height(),
+				navH,
+				$navW = $('#nvaWrapper'),
+				$navB = $('#navbarBrand'),
+				$navR = $('#navbarRight'),
+				$toAnchor2 = $('#toAnchor2'), //首页转下一页按钮
+				$anchor = $('.anchor'), //锚点
+				$anchorNav = $('.anchor-nav'), //锚点导航栏
+				$scrollTop = $('#scrollTop'), //回到顶部
+				$proBtn = $('.pro-button'),
+				$house = $("[data-protype=house]"),
+				$spot = $("[data-protype=spot]");
+			
+			//监听页面滚动
+			$(window).scroll(function(event){
+				winPos = $(window).scrollTop();
+				if(winPos<=300){
+					changeTopNav(winPos); //更改头部导航栏样式
+				} else if (winPos > winH) {
+					$scrollTop.show(); // 显示“回到顶部”按钮
+				} else {
+					$scrollTop.hide(); // 隐藏“回到顶部”按钮
+				}
+
+				$anchor.each(function(){
+				 	if(winH + winPos - $(this).offset().top > winH/2){
+				 		$anchorNav.eq($(this).index()).addClass('active').siblings().removeClass('active');
+				 	}
+				}); 
+		    });
+	
+			$scrollTop.click(function(event) {
+				//回到顶部
+				$('body,html').animate({"scrollTop":0}, 500);
+			});
+
+			$anchorNav.click(function(){
+				//转到点击锚点
+				changeAnchorNav($(this).index());
+			});
+
+			$toAnchor2.click(function(){
+				//回到第二页
+				changeAnchorNav(1);
+			});
+
+			$proBtn.click(function() {
+				//选择显示产品类型
+				$(this).addClass('active').siblings().removeClass('active');
+				
+				var type = $(this).data("type");
+
+				if(type == 'all') {
+					$('.zoomOut').addClass('zoomIn').removeClass('zoomOut').show();
+				} else {
+					$('[data-protype='+type+']').addClass('zoomIn').removeClass('zoomOut').siblings('[data-protype!='+type+']').addClass('zoomOut').removeClass('zoomIn');
+				}
+			})
+
+			/*********** 页面可见区域的动画 ***********/
+			$('.animated').appear();
+			$(document.body).on("appear", ".fadeInUpNow", function() {
+				$(this).addClass('fadeInUp');
+			});
+
+			$(document.body).on("appear", ".fadeInDownNow", function() {
+				$(this).addClass('fadeInDown');
+			});
+
+			$(document.body).on("appear", ".fadeInNow", function() {
+				$(this).addClass('fadeIn');
+			});
+
+
+			//转到指定锚点
+			function changeAnchorNav(index) {
+				var  t = $anchor.eq(index).offset().top;
+				$('body,html').animate({"scrollTop": t},500);
+				$anchorNav.eq(index).addClass('active').siblings().removeClass('active');
+			}
+
+			//更改头部导航栏样式
+			function changeTopNav(winPos){
+				navH = 100 - winPos/7.5;
+				$navW.css({'min-height': navH +'px', 'line-height': navH +'px', 'background-color': 'rgba(0,0,0,' + winPos/300 + ')'});
+				$navB.css({'line-height': navH +'px'});
+				$navR.css({'margin-top': 25 - winPos/15});
+			}
+		});
+  </script>
+</html>
