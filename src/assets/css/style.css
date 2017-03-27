@@ -55,6 +55,7 @@ body {
 	width: 100%;
 	margin-top: -30px;
     text-align: center;
+    opacity: 1;
 }
 
 .main-title span {
@@ -411,4 +412,35 @@ footer {
 .zoomOut {
 	display: none;
 	transition: display 0 linear 1s; 
+}
+
+#nvaWrapper {
+	min-height: 100px;
+	line-height: 100px;
+	background-color: rgba(0, 0, 0, 0);
+}
+#navbarBrand {
+	line-height: 100px;
+}
+#navbarRight {
+	margin-top: 25px;
+	text-align: none;
+}
+
+@media screen and (max-width: 767px) {
+	#nvaWrapper {
+		min-height: 60px !important;
+		line-height: 60px !important;
+		background-color: rgba(0, 0, 0, 1) !important;
+	}
+	#navbarBrand {
+		line-height: 60px !important;
+	}
+	#navbarRight {
+		margin-top: 5px !important;
+	}
+	#navbarRight li {
+		margin-top: 5px !important;
+		text-align: right !important;
+	}
 }

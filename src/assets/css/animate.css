@@ -13,6 +13,15 @@
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  opacity: 0;
+}
+
+.fadeIn, 
+.fadeInUp, 
+.fadeInDown,
+.zoomIn,
+[data-protype].animated {
+  opacity: 1;
 }
 
 .animated.infinite {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>b-demo</title>
+    <title>仿全视界全景</title>
     <link rel="stylesheet" type="text/css" href="src/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="src/assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="src/assets/css/style.css">
@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a id="navbarBrand" class="navbar-brand" href="button.html">
+          <a id="navbarBrand" class="navbar-brand" href="#">
           	<img class="logo-img" alt="logo" src="src/assets/css/img/qsjqjlogo.png">
           	全视界全景
           </a>
@@ -42,7 +42,7 @@
       <section class="anchor">
 		<div id="large-header" class="large-header">
 			<canvas id="demo-canvas"></canvas>
-			<h1 class="main-title animated fadeInUpNow"><span>全景</span><span>换个角度看世界</span></h1>
+			<h1 class="main-title animated fadeInUp"><span>全景</span><span>换个角度看世界</span></h1>
 			<div id="toAnchor2" class="mouse-down">
 				<span class="arrow-1"></span>
 				<span class="arrow-2"></span>
@@ -134,6 +134,7 @@
 		          </div>
 		          <h3 class="pro-header-2">南京长江大桥</h3>
 		        </div>
+		        <div style="clear: both;"></div>
 			</div>
 	  	</div>
 	  </section>
@@ -236,8 +237,7 @@
 
 	<div id="scrollTop" class="scroll-top"></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="src/assets/js/jquery.min.js"></script>
     <script src="src/assets/js/bootstrap.min.js"></script>
     <!-- 视差滚动插件 -->
     <script src="src/assets/js/jquery.stellar.js"></script>
@@ -247,12 +247,6 @@
   </body>
   <script>
 		$(function(){
-
-			// 初始化视差滚动插件
-			$.stellar({
-				horizontalScrolling: false,
-				verticalOffset: 40
-			});
 
 			var winPos, //当前滚动的地方的窗口顶端到整个页面顶端的距离
 				winH = $(window).height(),
@@ -267,7 +261,7 @@
 				$proBtn = $('.pro-button'),
 				$house = $("[data-protype=house]"),
 				$spot = $("[data-protype=spot]");
-			
+
 			//监听页面滚动
 			$(window).scroll(function(event){
 				winPos = $(window).scrollTop();
@@ -308,7 +302,7 @@
 				var type = $(this).data("type");
 
 				if(type == 'all') {
-					$('.zoomOut').addClass('zoomIn').removeClass('zoomOut').show();
+					$('.zoomOut').addClass('zoomIn').removeClass('zoomOut');
 				} else {
 					$('[data-protype='+type+']').addClass('zoomIn').removeClass('zoomOut').siblings('[data-protype!='+type+']').addClass('zoomOut').removeClass('zoomIn');
 				}
@@ -343,6 +337,12 @@
 				$navB.css({'line-height': navH +'px'});
 				$navR.css({'margin-top': 25 - winPos/15});
 			}
+
+			// 初始化视差滚动插件
+			// $.stellar({
+			// 	horizontalScrolling: false,
+			// 	verticalOffset: 40
+			// });
 		});
   </script>
 </html>
